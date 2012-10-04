@@ -1,0 +1,9 @@
+package object_oriented.cards;
+
+public class Deck {
+	Card[] cards= new Card[52];
+	
+	public Deck(){
+		
+	}
+}

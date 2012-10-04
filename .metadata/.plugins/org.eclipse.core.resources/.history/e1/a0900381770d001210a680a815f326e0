@@ -1,0 +1,18 @@
+package career_cup;
+
+import java.util.ArrayList;
+
+public class ColorfulNumbers {
+	
+	public static void main(String[] args){
+		
+	}
+
+	public boolean isColorful(int n){
+		ArrayList<Integer> num = new ArrayList<Integer>(n);
+		int temp = n;
+		while(temp>0){
+		}
+		return false;
+	}
+}

@@ -1,0 +1,13 @@
+package object_oriented.cards;
+
+public class Deck {
+	Card[] cards= new Card[52];
+	Suit[] suits = new Suit[4];
+	public Deck(){
+		int i;
+		suits[0].name = "diamond";
+		suits[1].name = "heart";
+		suits[2].name = "spade";
+		suits[3].name = "club";
+	}
+}

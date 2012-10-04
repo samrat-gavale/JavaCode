@@ -1,0 +1,18 @@
+package object_oriented.cards;
+
+public class Card {
+	int num = 0;
+	Suit suit;
+	public Card(int n, Suit s){
+		num = n;
+		suit = s;
+	}
+	public Card(){
+		
+	}
+	public void Swap(Card c){
+		Card temp = c;
+		c = this;
+		this = temp;
+	}
+}

@@ -1,0 +1,24 @@
+package object_oriented.cards;
+
+public class Deck {
+	Card[] cards= new Card[52];
+	Suit[] suits = new Suit[4];
+	public Deck(){
+		int i,j, suit_size = (cards.length/suits.length);
+		suits[0].name = "diamond";
+		suits[1].name = "heart";
+		suits[2].name = "spade";
+		suits[3].name = "club";
+		for(i=0;i<suits.length;i++)
+			for(j=0;j<suit_size;j++){
+				cards[i*suit_size+j].suit = suits[i];
+				cards[i*suit_size+j].num = j+1;
+			}
+	}
+	
+	public void randomize(){
+		int random1 = (int)Math.random()%52;
+		int random2 = (int)Math.random()%52;
+		cards[random1].Swap(cards[random2]);
+	}
+}

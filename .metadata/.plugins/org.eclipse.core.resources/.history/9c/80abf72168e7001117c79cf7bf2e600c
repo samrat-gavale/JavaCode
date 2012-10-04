@@ -1,0 +1,13 @@
+package object_oriented.cards;
+
+public class Card {
+	int num = 0;
+	Suit suit;
+	Card(int n, Suit s){
+		num = n;
+		suit = s;
+	}
+	Card(){
+		
+	}
+}

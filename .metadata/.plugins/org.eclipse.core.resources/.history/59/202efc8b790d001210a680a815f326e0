@@ -1,0 +1,26 @@
+package career_cup;
+
+import java.util.ArrayList;
+
+public class ColorfulNumbers {
+	
+	public static void main(String[] args){
+		int n = 12345;
+		isColorful(n);
+//		System.out.print(n);
+		System.out.print("\nThis is over.\n");
+	}
+
+	public static boolean isColorful(int n){
+		ArrayList<Integer> num = new ArrayList<Integer>(n);
+		int temp = n;
+		while(temp>0){
+			num.add(0, temp%10);
+			temp = temp / 10;
+		}
+		int i;
+		for(i = 0;i<num.size();i++)
+			System.out.print(num.get(i));
+		return false;
+	}
+}

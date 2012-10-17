@@ -1,0 +1,20 @@
+package career_cup;
+
+public class RemoveDuplicates {
+
+	public static void main(String args[]){
+		int arr[] = {1,2,5,9,3,1,8,4,5,4,1};
+		
+	}
+
+	/*following function removes duplicates from the array in order n.
+	 * It uses O(n) memory
+	 */
+	public static void removeDuplicates(int arr[]){
+		int i,j;
+		int chars[] = new int[256];
+		for(i = 0,j = 0; i < arr.length; i++){
+			
+		}
+	}
+}

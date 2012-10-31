@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="19" version="2.0">
 <workbenchAdvisor/>
 <window height="744" maximized="true" width="1024" x="66" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -13,13 +13,13 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,20 +28,17 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PrintParens.java" partName="PrintParens.java" path="/home/samrat/workspace/Prepare/src/recursion/PrintParens.java" title="PrintParens.java" tooltip="Prepare/src/recursion/PrintParens.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Prepare/src/recursion/PrintParens.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="631" selectionTopPixel="304"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
+<viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false" time="true"/>
 </view>
 <view id="org.eclipse.ui.views.ProgressView" partName="Progress">
 <viewState/>
@@ -53,6 +50,9 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="366" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="469"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -113,7 +113,7 @@
 </view>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.ui.internal.ide.application.ResourcePerspective" id="org.eclipse.ui.resourcePerspective" label="Resource"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -233,22 +233,24 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.search.ui.views.SearchView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ProgressView"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.jdt.junit.ResultView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
 <folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="JUnit"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
-<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -260,13 +262,12 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.17537023" ratioLeft="225" ratioRight="1058" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.75273865" ratioLeft="481" ratioRight="158" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info folder="true" part="bottom" ratio="0.942097" ratioLeft="602" ratioRight="37" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -275,17 +276,18 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="right" ratio="0.78504676" ratioLeft="756" ratioRight="207" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<info folder="true" part="right" ratio="0.6947867" ratioLeft="733" ratioRight="322" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -294,168 +296,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Prepare/src/career_cup/KnapSack.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Prepare/src/Trees_Graphs/Tree.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Prepare/src/Trees_Graphs/TreeNode.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Prepare/src/stacks_queues/SetOfStacks.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Prepare/src/stacks_queues/TowersOfHanoi.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Prepare/src/recursion/PrintParens.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Prepare/src/recursion/Manhattan.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Prepare/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.io(PrintStream.class"/>
-</editors>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="897" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="764" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="868" y="38"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="627" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="666" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="360" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="398" y="63"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1234" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1285" y="26"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1046" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1285" y="26"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1049" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1285" y="26"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1175" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1285" y="26"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1211" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1231" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1229" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1229" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1105" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1108" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1118" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1115" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1175" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1285" y="26"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1347" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="997" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="980" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1285" y="26"/>
-</item>
-<item historyLabel="Tree.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="TreeNode.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Tree.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1374" y="0"/>
-</item>
-<item historyLabel="SetOfStacks.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SetOfStacks.java" index="3">
-<position info="not_deleted" x="266" y="0"/>
-</item>
-<item historyLabel="SetOfStacks.java" index="3">
-<position info="not_deleted" x="294" y="4"/>
-</item>
-<item historyLabel="SetOfStacks.java" index="3">
-<position info="not_deleted" x="644" y="3"/>
-</item>
-<item historyLabel="SetOfStacks.java" index="3">
-<position info="not_deleted" x="926" y="5"/>
-</item>
-<item historyLabel="SetOfStacks.java" index="3">
-<position info="not_deleted" x="1134" y="11"/>
-</item>
-<item historyLabel="TowersOfHanoi.java" index="4">
-<position info="not_deleted" x="820" y="0"/>
-</item>
-<item historyLabel="SetOfStacks.java" index="3">
-<position info="not_deleted" x="1134" y="11"/>
-</item>
-<item historyLabel="PrintParens.java" index="5">
-<position info="not_deleted" x="631" y="0"/>
-</item>
-<item historyLabel="Manhattan.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="PrintParens.java" index="5">
-<position info="not_deleted" x="631" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1333" y="0"/>
-</item>
-<item historyLabel="PrintStream.class" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="KnapSack.java" index="0">
-<position info="not_deleted" x="1593" y="0"/>
-</item>
-<item active="true" historyLabel="PrintParens.java" index="5">
-<position info="not_deleted" x="631" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -472,38 +313,29 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="PrintStream.class" tooltip="java.io.PrintStream">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Prepare/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.io(PrintStream.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StackWithMin.java" tooltip="Prepare/src/stacks_queues/StackWithMin.java">
+<persistable path="/Prepare/src/stacks_queues/StackWithMin.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HammingNumbers.java" tooltip="Prepare/src/career_cup/HammingNumbers.java">
+<persistable path="/Prepare/src/career_cup/HammingNumbers.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WellFormedNumbers.java" tooltip="Prepare/src/recursion/WellFormedNumbers.java">
+<persistable path="/Prepare/src/recursion/WellFormedNumbers.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Manhattan2.java" tooltip="Prepare/src/recursion/Manhattan2.java">
+<persistable path="/Prepare/src/recursion/Manhattan2.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Manhattan.java" tooltip="Prepare/src/recursion/Manhattan.java">
 <persistable path="/Prepare/src/recursion/Manhattan.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PrintParens.java" tooltip="Prepare/src/recursion/PrintParens.java">
-<persistable path="/Prepare/src/recursion/PrintParens.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PostToInfix.java" tooltip="Prepare/src/career_cup/PostToInfix.java">
+<persistable path="/Prepare/src/career_cup/PostToInfix.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TowersOfHanoi.java" tooltip="Prepare/src/stacks_queues/TowersOfHanoi.java">
-<persistable path="/Prepare/src/stacks_queues/TowersOfHanoi.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PrefixToInfix.java" tooltip="Prepare/src/career_cup/PrefixToInfix.java">
+<persistable path="/Prepare/src/career_cup/PrefixToInfix.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SetOfStacks.java" tooltip="Prepare/src/stacks_queues/SetOfStacks.java">
-<persistable path="/Prepare/src/stacks_queues/SetOfStacks.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TreeNode.java" tooltip="Prepare/src/Trees_Graphs/TreeNode.java">
-<persistable path="/Prepare/src/Trees_Graphs/TreeNode.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Tree.java" tooltip="Prepare/src/Trees_Graphs/Tree.java">
-<persistable path="/Prepare/src/Trees_Graphs/Tree.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="KnapSack.java" tooltip="Prepare/src/career_cup/KnapSack.java">
-<persistable path="/Prepare/src/career_cup/KnapSack.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RemoveDuplicates.java" tooltip="Prepare/src/career_cup/RemoveDuplicates.java">
-<persistable path="/Prepare/src/career_cup/RemoveDuplicates.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PrintSpiral.java" tooltip="Prepare/src/career_cup/PrintSpiral.java">
-<persistable path="/Prepare/src/career_cup/PrintSpiral.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PairsSum1911.java" tooltip="Prepare/src/career_cup/PairsSum1911.java">
-<persistable path="/Prepare/src/career_cup/PairsSum1911.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PlayerActionTest.java" tooltip="cardgame-ai/test/jp/co/worksap/ate/cardgame/ai/PlayerActionTest.java">
+<persistable path="/cardgame-ai/test/jp/co/worksap/ate/cardgame/ai/PlayerActionTest.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MaxSequence.java" tooltip="Prepare/src/career_cup/MaxSequence.java">
 <persistable path="/Prepare/src/career_cup/MaxSequence.java"/>
@@ -511,11 +343,20 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ColorfulNumbers.java" tooltip="Prepare/src/career_cup/ColorfulNumbers.java">
 <persistable path="/Prepare/src/career_cup/ColorfulNumbers.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Team5.txt" tooltip="cardgame-ai/Team5.txt">
-<persistable path="/cardgame-ai/Team5.txt"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sum_Smaller_Than_Current.java" tooltip="Prepare/src/career_cup/Sum_Smaller_Than_Current.java">
+<persistable path="/Prepare/src/career_cup/Sum_Smaller_Than_Current.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="cardgame-player-spec-1.0.jar" tooltip="cardgame-ai/lib/cardgame-player-spec-1.0.jar">
-<persistable path="/cardgame-ai/lib/cardgame-player-spec-1.0.jar"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SeqAdd.java" tooltip="Prepare/src/recursion/SeqAdd.java">
+<persistable path="/Prepare/src/recursion/SeqAdd.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="PrintStream.class" tooltip="java.io.PrintStream">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Prepare/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.io(PrintStream.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PrintParens.java" tooltip="Prepare/src/recursion/PrintParens.java">
+<persistable path="/Prepare/src/recursion/PrintParens.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TowersOfHanoi.java" tooltip="Prepare/src/stacks_queues/TowersOfHanoi.java">
+<persistable path="/Prepare/src/stacks_queues/TowersOfHanoi.java"/>
 </file>
 </mruList>
 </workbench>

@@ -1,0 +1,13 @@
+package career_cup;
+
+import java.util.Stack;
+
+public class PrefixToInfix {
+
+	public static String PrefixToInfix(String str){
+		String ret = new String();
+		Stack<String> stk = new Stack<String>();
+		char arr[] = str.toCharArray();
+		return ret;
+	}
+}

@@ -1,0 +1,46 @@
+package career_cup;
+
+import java.util.Stack;
+
+public class PostToInfix {
+
+	public static void main(String args[]){
+		String exp = new String();
+		exp = "cd*";
+		System.out.println(PrefixToInfix(exp));
+	}
+
+	public static String PrefixToInfix(String str){
+		String ret = new String();
+		String a,b,c;
+		Stack<String> stk = new Stack<String>();
+		char arr[] = str.toCharArray();
+		int i, len = arr.length;
+		for(i=0;i<len;i++){
+			a = str.substring(i, i+1);
+			stk.push(a);
+			while(!stk.empty()){
+				if(stk.size()<=2)
+					break;
+				a = stk.pop();
+				b = stk.peek();
+				if( a.length() == 1 && 
+					( a.charAt(0)<='a' && a.charAt(0)>='z') &&
+				    (a.charAt(0)!='(' && a.charAt(0)!=')') 
+				  )
+				{
+					b = stk.pop();
+					c = stk.pop();
+					a = '(' + b + c + a + ')';
+					stk.push(a);
+				}
+				else{
+					stk.push(a);
+					break;
+				}
+			}
+		}
+		return stk.peek();
+	}
+	
+}

@@ -1,0 +1,49 @@
+package career_cup;
+
+import java.util.Stack;
+
+public class PrefixToInfix {
+
+	public static void main(String args[]){
+		String exp = new String();
+		exp = "+-ab/cd";
+		System.out.println(PrefixToInfix(exp));
+	}
+
+	public static String PrefixToInfix(String str){
+		String ret = new String();
+		String a,b,c;
+		Stack<String> stk = new Stack<String>();
+		char arr[] = str.toCharArray();
+		int i, len = arr.length;
+		for(i=0;i<len;i++){
+			a = str.substring(i, i);
+			stk.push(a);
+			while(!stk.empty()){
+				if(stk.size()<=2)
+					break;
+				a = stk.pop();
+				b = stk.peek();
+				System.out.println(a + " and " + b);
+				if( (a.length()>1 || 
+					( a.charAt(0)>='a' && 
+					  a.charAt(0)<='z')) 
+				   &&
+				   (b.length()>1 || 
+							( b.charAt(0)>='a' && 
+							  b.charAt(0)<='z'))
+				   ) {
+					c = stk.pop();
+					a = '(' + a + c + b + ')';
+					stk.push(a);
+				}
+				else{
+					stk.push(a);
+					break;
+				}
+			}
+		}
+		return stk.peek();
+	}
+	
+}

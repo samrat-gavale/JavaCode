@@ -1,0 +1,10 @@
+package career_cup;
+
+public class PrefixToInfix {
+
+	public static String PrefixToInfix(String str){
+		
+		Str ret = new String();
+		return ret;
+	}
+}
